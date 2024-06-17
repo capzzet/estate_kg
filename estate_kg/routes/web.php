@@ -26,3 +26,8 @@ Route::get('/reviews', [ReviewsController::class, 'index'])->name('reviews.index
 Route::post('/reviews', [ReviewsController::class, 'store'])->name('reviews.store');
 
 Route::post('/callback', [CallbackController::class, 'store']);
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});

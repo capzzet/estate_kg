@@ -194,11 +194,11 @@
             </div>
             <div class="advertisement-agent">
                 <div class="agent-image">
-                    <img src="{{ asset('images/agent4.jpg') }}" alt="Агент">
+                    <img src="{{ asset('storage/' . $agent->photo) }}" alt="Агент">
                 </div>
                 <div class="agent-info">
-                    <div class="agent-name">Романенкова Наталья Викторовна</div>
-                    <div class="agent-description">Агент</div>
+                    <div class="agent-name">{{ $agent->name }}</div>
+                    <div class="agent-description">{{ $agent->description }}</div>
                 </div>
             </div>
             <div class="agent-price-options">
