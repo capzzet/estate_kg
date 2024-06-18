@@ -188,9 +188,9 @@
                 </div>
             </div>
             <div class="descrip">
-                <p>Москва, Южное Бутово, Южное Бутово, Бартеневская ул., 18, к 2</p>
-                <p>Бунинская аллея</p>
-                <p>Арт. 67512087 Продается студия 25 м2 в новом ЖК "Южные сады" (А101)...</p>
+                <p>Город: Москва</p>
+                <p>Адрес: Южное Бутово, Южное Бутово, Бартеневская ул., 18, к 2</p>
+
             </div>
             <div class="advertisement-agent">
                 <div class="agent-image">
@@ -198,7 +198,7 @@
                 </div>
                 <div class="agent-info">
                     <div class="agent-name">{{ $agent->name }}</div>
-                    <div class="agent-description">{{ $agent->description }}</div>
+                    <div class="agent-description">Агент</div>
                 </div>
             </div>
             <div class="agent-price-options">
@@ -207,9 +207,18 @@
                         Показать телефон
                     </button>
                     <button id="phone-number" class="contact-button" style="display: none;">
-                        +996 (123) 456-78-90
+                        {{ $agent->phone }}
                     </button>
+                    <div class="icons">
+                        <a href="{{ $agent->telegram }}" target="_blank">
+                            <img src="{{ asset('images/telegram.svg') }}" alt="Telegram">
+                        </a>
+                        <a href="{{ $agent->whatsapp }}" target="_blank">
+                            <img src="{{ asset('images/whatsapp.svg') }}" alt="Whatsapp">
+                        </a>
+                    </div>
                 </div>
+                <button>Подробнее</button>
             </div>
         </div>
     </div>

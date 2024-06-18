@@ -13,5 +13,8 @@ class Agent extends Model
         'name',
         'email',
         'photo',
+        'phone',
+        'whatsapp',
+        'telegram',
     ];
 }
